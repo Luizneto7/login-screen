@@ -15,7 +15,7 @@
 </head>
 <body>
     <main class="container">
-        <form id="login-form">
+        <form id="login-form" class="hidden">
             <h1 class="section-title">Login Dazzle</h1>
             <div class="input-box">
                 <label class="visually-hidden">E-mail</label>
@@ -25,7 +25,7 @@
             <div class="input-box">
                 <label class="visually-hidden">Password</label>
                 <input type="password" name="password" id="password" placeholder="Password" required>
-                <i class="bx bxs-lock-alt"></i>
+                <i class="bx bxs-lock-alt" id= toggle-password title="Show/Hide password"></i>
             </div>
             <div class="remember-forgot">
                 <label>
@@ -36,8 +36,40 @@
             </div>
             <button type="submit" class="login-button">Login</button>
             <div class="register-link">
-                <p>Don't have an account? <a href="#" title="create an account">Register</a></p>
+                <p>Don't have an account? <a id="show-register-form" href="#" title="create an account">Register</a></p>
             </div>
+        </form>
+
+        <form id="register-form">
+            <h1 class="section-title">Register</h1>
+            <div class="input-box">
+                <label class="visually-hidden">Nome</label>
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="input-box">
+                <label class="visually-hidden">E-mail</label>
+                <input type="email" placeholder="E-mail" required>
+            </div>
+            <div class="input-box">
+                <label class="visually-hidden">Phone</label>
+                <input type="tel" placeholder="Phone Number" required>
+            </div>
+            <div class="input-box">
+                <label class="visually-hidden">Password</label>
+                <input type="password" placeholder="Password" required>
+                <i class="bx bxs-lock-alt" id= toggle-password title="Show/Hide password"></i>
+            </div>
+            <div class="input-box">
+                <label class="visually-hidden">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" required>
+                <i class="bx bxs-lock-alt" id= toggle-password title="Show/Hide password"></i>
+            </div>
+
+            <button type="submit" class="login-button">Submit</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="#" id="show-login-form" title="Log in">Log in here</a></p>
+            </div>
+
         </form>
     </main>
     <script src="./Scripts/main.js" type="module" defer></script>
